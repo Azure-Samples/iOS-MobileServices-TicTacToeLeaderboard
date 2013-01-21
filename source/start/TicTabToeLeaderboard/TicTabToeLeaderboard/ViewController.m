@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.txtName.text = [defaults objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,8 +51,6 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setValue:name forKey:@"name"];
     [defaults synchronize];
-    
-    NSString *na = [defaults objectForKey:@"name"];
     
     return YES;
 }
