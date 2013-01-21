@@ -19,6 +19,7 @@
 		1097B09D16ADEE14007DB916 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1097B09B16ADEE14007DB916 /* MainStoryboard.storyboard */; };
 		1097B0A016ADEE14007DB916 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1097B09F16ADEE14007DB916 /* ViewController.m */; };
 		1097B0A816ADF740007DB916 /* TicTacToeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1097B0A716ADF73F007DB916 /* TicTacToeViewController.m */; };
+		1097B0AB16ADFA07007DB916 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1097B0AA16ADFA07007DB916 /* LeaderboardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		1097B09F16ADEE14007DB916 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1097B0A616ADF73F007DB916 /* TicTacToeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeViewController.h; sourceTree = "<group>"; };
 		1097B0A716ADF73F007DB916 /* TicTacToeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeViewController.m; sourceTree = "<group>"; };
+		1097B0A916ADFA07007DB916 /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
+		1097B0AA16ADFA07007DB916 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				1097B08A16ADEE14007DB916 /* Supporting Files */,
 				1097B0A616ADF73F007DB916 /* TicTacToeViewController.h */,
 				1097B0A716ADF73F007DB916 /* TicTacToeViewController.m */,
+				1097B0A916ADFA07007DB916 /* LeaderboardViewController.h */,
+				1097B0AA16ADFA07007DB916 /* LeaderboardViewController.m */,
 			);
 			path = TicTabToeLeaderboard;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				1097B09416ADEE14007DB916 /* AppDelegate.m in Sources */,
 				1097B0A016ADEE14007DB916 /* ViewController.m in Sources */,
 				1097B0A816ADF740007DB916 /* TicTacToeViewController.m in Sources */,
+				1097B0AB16ADFA07007DB916 /* LeaderboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
