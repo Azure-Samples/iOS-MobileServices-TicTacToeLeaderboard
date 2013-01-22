@@ -23,8 +23,12 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidLoad {
     int turnIndicator = arc4random() % 2;
     if (turnIndicator == 0) {
         playersTurn = NO;
@@ -79,10 +83,52 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)tappedPlaySquare:(id)sender {
+    UIButton *tappedButton = sender;
+    
+    
+    if ([tappedButton.currentTitle length] == 0) {
+        [tappedButton setTitle:currentCharacter forState:UIControlStateNormal];
+        spotsRemaining--;
+        
+        if ([self checkForGameover] || spotsRemaining == 0) {
+            [self gameover];
+            return;
+        }
+        if ([currentCharacter isEqualToString:@"X"])
+            currentCharacter = @"O";
+        else
+            currentCharacter = @"X";
+        
+        playersTurn = !playersTurn;
+        computersTurn = !computersTurn;
+        
+        if (computersTurn) {
+            [self computerTurn];
+        }
+    }
+}
+
+- (void) computerTurn {
+    //Kick off computers turn in the background
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        int cRow = -1;
+        int cCol = -1;
+        UIButton *pickedButton;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                pickedButton = tableValueArray[i][j];
+                if ([pickedButton.currentTitle length] == 0) {
+                    cRow = i;
+                    cCol = j;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self computerPicksButton:pickedButton];
+                    });
+                    return;
+                }
+            }
+        }
+    });
 }
 
 - (void)computerPicksButton:(UIButton *)pickedButton{
@@ -104,6 +150,19 @@
     playersTurn = !playersTurn;
     computersTurn = !computersTurn;
     self.lblInfo.text = @"Your turn!";
+}
+
+- (void)gameover {
+    if ([winningCharacter length] == 0) {
+        self.lblInfo.text = @"No winner!";
+        self.btnTopLeft.backgroundColor = self.btnTopMiddle.backgroundColor =
+        self.btnTopRight.backgroundColor = self.btnMiddleLeft.backgroundColor =
+        self.btnMiddleMiddle.backgroundColor = self.btnMiddleRight.backgroundColor  =
+        self.btnBottomLeft.backgroundColor = self.btnBottomMiddle.backgroundColor = self.btnBottomRight.backgroundColor = [UIColor redColor];
+    }
+    else {
+        self.lblInfo.text = [NSString stringWithFormat:@"%@ wins!", winningCharacter];
+    }
 }
 
 - (BOOL)checkForGameover {
@@ -184,63 +243,8 @@
 }
 
 
-- (void)gameover {
-    if ([winningCharacter length] == 0) {
-        self.lblInfo.text = @"No winner!";
-        self.btnTopLeft.backgroundColor = self.btnTopMiddle.backgroundColor =
-        self.btnTopRight.backgroundColor = self.btnMiddleLeft.backgroundColor =
-        self.btnMiddleMiddle.backgroundColor = self.btnMiddleRight.backgroundColor  =
-        self.btnBottomLeft.backgroundColor = self.btnBottomMiddle.backgroundColor = self.btnBottomRight.backgroundColor = [UIColor redColor];
-    }
-    else {
-        self.lblInfo.text = [NSString stringWithFormat:@"%@ wins!", winningCharacter];
-    }
-}
-- (IBAction)tappedPlaySquare:(id)sender {
-    UIButton *tappedButton = sender;
-    
 
-    if ([tappedButton.currentTitle length] == 0) {
-        [tappedButton setTitle:currentCharacter forState:UIControlStateNormal];
-        spotsRemaining--;
-        
-        if ([self checkForGameover] || spotsRemaining == 0) {
-            [self gameover];
-            return;
-        }
-        if ([currentCharacter isEqualToString:@"X"])
-            currentCharacter = @"O";
-        else
-            currentCharacter = @"X";
-        
-        playersTurn = !playersTurn;
-        computersTurn = !computersTurn;
-        
-        if (computersTurn) {
-            [self computerTurn];
-        }
-    }
-}
 
-- (void) computerTurn {
-    //Kick off computers turn in the background
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        int cRow = -1;
-        int cCol = -1;
-        UIButton *pickedButton;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                pickedButton = tableValueArray[i][j];
-                if ([pickedButton.currentTitle length] == 0) {
-                    cRow = i;
-                    cCol = j;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self computerPicksButton:pickedButton];
-                    });
-                    return;
-                }
-            }
-        }
-    });
-}
+
+
 @end
