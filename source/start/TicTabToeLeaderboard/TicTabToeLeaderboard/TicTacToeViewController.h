@@ -33,6 +33,7 @@
 - (IBAction)tappedPlaySquare:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 - (IBAction)tappedGesture:(id)sender;
+- (void)computerTurn;
 - (void)computerPicksButton:(UIButton *)pickedButton;
 - (void)gameover;
 - (BOOL)checkForGameover;

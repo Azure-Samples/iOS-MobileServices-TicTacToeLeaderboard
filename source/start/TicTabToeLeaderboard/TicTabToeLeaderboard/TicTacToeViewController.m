@@ -25,9 +25,15 @@
 
 - (void)viewDidLoad
 {
-    playersTurn = YES;
-    computersTurn = NO;
-    
+    int turnIndicator = arc4random() % 2;
+    if (turnIndicator == 0) {
+        playersTurn = NO;
+        computersTurn = YES;
+    } else {
+        playersTurn = YES;
+        computersTurn = NO;
+    }
+
     currentCharacter = @"X";
     spotsRemaining = 9;
     
@@ -53,13 +59,24 @@
     rightVerticalLine.backgroundColor = [UIColor blackColor];
     [self.view addSubview:rightVerticalLine];
     
-    self.lblInfo.text = @"You go first!";
+    
         
     tableValueArray = [[NSMutableArray alloc] initWithCapacity: 3];
     
     [tableValueArray insertObject:[NSArray arrayWithObjects:self.btnTopLeft,self.btnTopMiddle,self.btnTopRight,nil] atIndex:0];
     [tableValueArray insertObject:[NSArray arrayWithObjects:self.btnMiddleLeft,self.btnMiddleMiddle,self.btnMiddleRight,nil] atIndex:1];
     [tableValueArray insertObject:[NSArray arrayWithObjects:self.btnBottomLeft,self.btnBottomMiddle,self.btnBottomRight,nil] atIndex:2];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (computersTurn) {
+        self.lblInfo.text = @"Computer's turn";
+        [self computerTurn];
+    } else {
+        self.lblInfo.text = @"Your turn!";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +103,7 @@
     
     playersTurn = !playersTurn;
     computersTurn = !computersTurn;
+    self.lblInfo.text = @"Your turn!";
 }
 
 - (BOOL)checkForGameover {
@@ -120,8 +138,8 @@
     }
     
     //Vertical Wins
-    if ([self.btnTopLeft.currentTitle isEqualToString:self.btnMiddleMiddle.currentTitle] &&
-        [self.btnTopLeft.currentTitle isEqualToString:self.btnBottomRight.currentTitle]) {
+    if ([self.btnTopLeft.currentTitle isEqualToString:self.btnMiddleLeft.currentTitle] &&
+        [self.btnTopLeft.currentTitle isEqualToString:self.btnBottomLeft.currentTitle]) {
         winningCharacter = self.btnTopLeft.currentTitle;
         
         self.btnTopLeft.backgroundColor = self.btnMiddleLeft.backgroundColor = self.btnBottomLeft.backgroundColor = [UIColor greenColor];
@@ -199,27 +217,30 @@
         computersTurn = !computersTurn;
         
         if (computersTurn) {
-            //Kick off computers turn in the background
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-                int cRow = -1;
-                int cCol = -1;
-                UIButton *pickedButton;
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        pickedButton = tableValueArray[i][j];
-                        if ([pickedButton.currentTitle length] == 0) {
-                            cRow = i;
-                            cCol = j;
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                [self computerPicksButton:pickedButton];
-                            });
-                            return;
-                        }
-                    }
-                }                
-            });
+            [self computerTurn];
         }
     }
+}
 
+- (void) computerTurn {
+    //Kick off computers turn in the background
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        int cRow = -1;
+        int cCol = -1;
+        UIButton *pickedButton;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                pickedButton = tableValueArray[i][j];
+                if ([pickedButton.currentTitle length] == 0) {
+                    cRow = i;
+                    cCol = j;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self computerPicksButton:pickedButton];
+                    });
+                    return;
+                }
+            }
+        }
+    });
 }
 @end
