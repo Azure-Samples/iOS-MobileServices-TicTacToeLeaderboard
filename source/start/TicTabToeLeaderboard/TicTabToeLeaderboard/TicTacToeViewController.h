@@ -13,15 +13,29 @@
     BOOL playersTurn;
     BOOL computersTurn;
     NSMutableArray *tableValueArray;
+
     NSString *currentCharacter;
     int spotsRemaining;
     NSString *winningCharacter;
     CGFloat distance;
+
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnTopLeft;
+@property (weak, nonatomic) IBOutlet UIButton *btnMiddleLeft;
+@property (weak, nonatomic) IBOutlet UIButton *btnBottomLeft;
+@property (weak, nonatomic) IBOutlet UIButton *btnTopMiddle;
+@property (weak, nonatomic) IBOutlet UIButton *btnMiddleMiddle;
+@property (weak, nonatomic) IBOutlet UIButton *btnBottomMiddle;
+@property (weak, nonatomic) IBOutlet UIButton *btnTopRight;
+@property (weak, nonatomic) IBOutlet UIButton *btnMiddleRight;
+@property (weak, nonatomic) IBOutlet UIButton *btnBottomRight;
+//@property (weak, nonatomic) NSMutableArray *tableValueArray;
+
+- (IBAction)tappedPlaySquare:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
 - (IBAction)tappedGesture:(id)sender;
-- (void)computerPicksRow:(int)row andColumn:(int)column;
+- (void)computerPicksButton:(UIButton *)pickedButton;
 - (void)gameover;
-- (BOOL)checkForGameoverAndDrawWinner:(BOOL)shouldDraw;
+- (BOOL)checkForGameover;
 @end

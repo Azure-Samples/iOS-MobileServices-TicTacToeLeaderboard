@@ -77,30 +77,193 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-RB-Bmy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="7ma-5G-zUt"/>
+                                    <constraint firstAttribute="height" constant="72" id="F0e-wN-4HB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="aqe-6s-JHM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENO-5Y-o6y">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="J8o-uK-yrW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="Rra-sW-LIn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4D-83-TfH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="l6f-WT-tUM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="3rd-cr-k9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9X-ZU-jOB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Je7-j8-PQa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="MaD-jZ-lbl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgI-nP-KaX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="uLD-Tq-vrE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="cIz-LI-nN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otr-Gw-CKk">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="XPK-oB-t6J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-0D-Z2P">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="gAA-6m-faL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7G-td-rBO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="ASe-N2-hjj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxf-uG-b8d">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPlaySquare:" destination="zqo-rf-2Yv" eventType="touchUpInside" id="xXY-dU-ELx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="P4D-83-TfH" firstAttribute="bottom" secondItem="ENO-5Y-o6y" secondAttribute="bottom" type="default" id="3fS-qe-S5M"/>
+                            <constraint firstItem="KgI-nP-KaX" firstAttribute="bottom" secondItem="otr-Gw-CKk" secondAttribute="bottom" type="default" id="4dx-eR-8aH"/>
+                            <constraint firstItem="uxf-uG-b8d" firstAttribute="leading" secondItem="P4D-83-TfH" secondAttribute="leading" type="default" id="Bnd-Sm-8dE"/>
+                            <constraint firstItem="KgI-nP-KaX" firstAttribute="leading" secondItem="s9X-ZU-jOB" secondAttribute="leading" type="default" id="Ckk-qT-QLo"/>
+                            <constraint firstItem="otr-Gw-CKk" firstAttribute="leading" secondItem="u7G-td-rBO" secondAttribute="leading" type="default" id="DBL-NF-bAH"/>
+                            <constraint firstItem="otr-Gw-CKk" firstAttribute="top" secondItem="KgI-nP-KaX" secondAttribute="top" type="default" id="DHg-BH-7Ap"/>
+                            <constraint firstItem="s9X-ZU-jOB" firstAttribute="top" secondItem="FQl-lc-wK5" secondAttribute="top" constant="155" id="FQS-1A-gmr"/>
+                            <constraint firstItem="u7G-td-rBO" firstAttribute="top" secondItem="s9X-ZU-jOB" secondAttribute="top" type="default" id="Fdn-Yu-xv8"/>
+                            <constraint firstItem="ENO-5Y-o6y" firstAttribute="bottom" secondItem="dkq-RB-Bmy" secondAttribute="bottom" type="default" id="GOV-Ui-aGr"/>
+                            <constraint firstItem="otr-Gw-CKk" firstAttribute="trailing" secondItem="u7G-td-rBO" secondAttribute="trailing" type="default" id="KUU-47-qsi"/>
+                            <constraint firstItem="P4D-83-TfH" firstAttribute="top" secondItem="ENO-5Y-o6y" secondAttribute="top" type="default" id="M2j-Rv-zU1"/>
+                            <constraint firstAttribute="trailing" secondItem="2a8-0D-Z2P" secondAttribute="trailing" constant="7" id="M8s-i5-9Gg"/>
+                            <constraint firstItem="otr-Gw-CKk" firstAttribute="bottom" secondItem="2a8-0D-Z2P" secondAttribute="bottom" type="default" id="Qxh-ho-iYn"/>
+                            <constraint firstItem="dkq-RB-Bmy" firstAttribute="leading" secondItem="FQl-lc-wK5" secondAttribute="leading" constant="9" id="WIb-Xa-Fks"/>
+                            <constraint firstItem="2a8-0D-Z2P" firstAttribute="top" secondItem="otr-Gw-CKk" secondAttribute="top" type="default" id="Xxx-z6-fla"/>
+                            <constraint firstItem="KgI-nP-KaX" firstAttribute="top" secondItem="FQl-lc-wK5" secondAttribute="top" constant="259" type="user" id="YuF-JZ-tio"/>
+                            <constraint firstItem="uxf-uG-b8d" firstAttribute="bottom" secondItem="u7G-td-rBO" secondAttribute="bottom" type="default" id="aBR-eY-SzX"/>
                             <constraint firstItem="R3E-C1-gta" firstAttribute="top" secondItem="FQl-lc-wK5" secondAttribute="top" constant="6" id="cTd-uN-naA"/>
+                            <constraint firstItem="uxf-uG-b8d" firstAttribute="top" secondItem="u7G-td-rBO" secondAttribute="top" type="default" id="dmB-7I-9ba"/>
+                            <constraint firstItem="2a8-0D-Z2P" firstAttribute="leading" secondItem="uxf-uG-b8d" secondAttribute="leading" type="default" id="gml-wE-dbv"/>
+                            <constraint firstItem="2a8-0D-Z2P" firstAttribute="trailing" secondItem="uxf-uG-b8d" secondAttribute="trailing" type="default" id="hhV-iD-eUd"/>
+                            <constraint firstItem="ENO-5Y-o6y" firstAttribute="top" secondItem="dkq-RB-Bmy" secondAttribute="top" type="default" id="iLJ-lW-m43"/>
                             <constraint firstItem="R3E-C1-gta" firstAttribute="centerX" secondItem="FQl-lc-wK5" secondAttribute="centerX" type="default" id="jr9-ox-Qxj"/>
+                            <constraint firstItem="ENO-5Y-o6y" firstAttribute="leading" secondItem="FQl-lc-wK5" secondAttribute="leading" constant="116" id="mSv-xW-gLS"/>
+                            <constraint firstItem="s9X-ZU-jOB" firstAttribute="trailing" secondItem="dkq-RB-Bmy" secondAttribute="trailing" type="default" id="mvK-Fj-iDI"/>
+                            <constraint firstItem="s9X-ZU-jOB" firstAttribute="leading" secondItem="dkq-RB-Bmy" secondAttribute="leading" type="default" id="oxe-li-wqW"/>
+                            <constraint firstItem="uxf-uG-b8d" firstAttribute="trailing" secondItem="P4D-83-TfH" secondAttribute="trailing" type="default" id="rli-L5-1eq"/>
+                            <constraint firstItem="u7G-td-rBO" firstAttribute="bottom" secondItem="s9X-ZU-jOB" secondAttribute="bottom" type="default" id="slJ-cY-D3d"/>
+                            <constraint firstItem="u7G-td-rBO" firstAttribute="trailing" secondItem="ENO-5Y-o6y" secondAttribute="trailing" type="default" id="vDi-vf-eEG"/>
+                            <constraint firstItem="u7G-td-rBO" firstAttribute="leading" secondItem="ENO-5Y-o6y" secondAttribute="leading" type="default" id="vKc-Pb-GVy"/>
+                            <constraint firstItem="KgI-nP-KaX" firstAttribute="trailing" secondItem="s9X-ZU-jOB" secondAttribute="trailing" type="default" id="xjN-FK-hMf"/>
+                            <constraint firstItem="dkq-RB-Bmy" firstAttribute="top" secondItem="FQl-lc-wK5" secondAttribute="top" constant="52" id="z1L-rl-wR1"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="tUc-nM-ZBs" appends="YES" id="j6u-OD-Gdx"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="R5h-UI-XVx"/>
                     <navigationItem key="navigationItem" id="tvA-gm-e4i"/>
                     <connections>
+                        <outlet property="btnBottomLeft" destination="KgI-nP-KaX" id="3hV-W1-Rqc"/>
+                        <outlet property="btnBottomMiddle" destination="otr-Gw-CKk" id="dh0-7p-Pwj"/>
+                        <outlet property="btnBottomRight" destination="2a8-0D-Z2P" id="XdM-Ve-Wxa"/>
+                        <outlet property="btnMiddleLeft" destination="s9X-ZU-jOB" id="Eta-VC-nou"/>
+                        <outlet property="btnMiddleMiddle" destination="u7G-td-rBO" id="Bl9-P9-zjL"/>
+                        <outlet property="btnMiddleRight" destination="uxf-uG-b8d" id="Yzs-20-dN1"/>
+                        <outlet property="btnTopLeft" destination="dkq-RB-Bmy" id="pHT-9T-AZW"/>
+                        <outlet property="btnTopMiddle" destination="ENO-5Y-o6y" id="iNj-FN-SrC"/>
+                        <outlet property="btnTopRight" destination="P4D-83-TfH" id="PwJ-lt-IuV"/>
                         <outlet property="lblInfo" destination="R3E-C1-gta" id="KZt-Jw-lbJ"/>
-                        <outlet property="tapGestureRecognizer" destination="tUc-nM-ZBs" id="ETX-yf-lUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nq7-LQ-duG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="tUc-nM-ZBs">
-                    <connections>
-                        <action selector="tappedGesture:" destination="zqo-rf-2Yv" id="ByG-Io-ias"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1649" y="-222"/>
         </scene>
@@ -174,6 +337,39 @@
             <point key="canvasLocation" x="1640" y="522"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LeaderboardViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeaderboardViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TicTacToeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TicTacToeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tappedGesture:"/>
+                <relationship kind="action" name="tappedPlaySquare:"/>
+                <relationship kind="outlet" name="btnBottomLeft" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnBottomMiddle" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnBottomRight" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnMiddleLeft" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnMiddleMiddle" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnMiddleRight" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnTopLeft" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnTopMiddle" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnTopRight" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblInfo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tapGestureRecognizer" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tappedPlay:"/>
+                <relationship kind="outlet" name="txtName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
