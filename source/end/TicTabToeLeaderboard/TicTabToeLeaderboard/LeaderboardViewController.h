@@ -11,5 +11,6 @@
 @interface LeaderboardViewController : UITableViewController
 
 - (void) refreshData;
+@property (weak, nonatomic) IBOutlet UIView *viewHeader;
 
 @end
