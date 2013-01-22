@@ -13,7 +13,6 @@
     BOOL playersTurn;
     BOOL computersTurn;
     NSMutableArray *tableValueArray;
-
     NSString *currentCharacter;
     int spotsRemaining;
     NSString *winningCharacter;
@@ -29,10 +28,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnTopRight;
 @property (weak, nonatomic) IBOutlet UIButton *btnMiddleRight;
 @property (weak, nonatomic) IBOutlet UIButton *btnBottomRight;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 - (IBAction)tappedPlaySquare:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
-- (IBAction)tappedGesture:(id)sender;
 - (void)computerTurn;
 - (void)computerPicksButton:(UIButton *)pickedButton;
 - (void)gameover;
