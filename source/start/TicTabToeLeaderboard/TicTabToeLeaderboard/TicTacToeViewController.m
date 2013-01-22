@@ -200,9 +200,6 @@
         
         if (computersTurn) {
             //Kick off computers turn in the background
-            
-            __block NSMutableArray *local = tableValueArray;
-            
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
                 int cRow = -1;
                 int cCol = -1;
