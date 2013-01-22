@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TicTacToeViewController : UIViewController
-
+@interface TicTacToeViewController : UIViewController {
+    @private
+    BOOL playersTurn;
+    BOOL computersTurn;
+    NSMutableArray *tableValueArray;
+    NSString *currentCharacter;
+    int spotsRemaining;
+    NSString *winningCharacter;
+}
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
+- (IBAction)tappedGesture:(id)sender;
+- (void)computerPicksRow:(int)row andColumn:(int)column;
+- (void)gameover;
+- (BOOL)checkForGameover;
 @end

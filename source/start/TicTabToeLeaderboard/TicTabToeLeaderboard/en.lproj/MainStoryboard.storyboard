@@ -68,12 +68,39 @@
                     <view key="view" contentMode="scaleToFill" id="FQl-lc-wK5">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3E-C1-gta">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="cFm-Lh-jmh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="R3E-C1-gta" firstAttribute="top" secondItem="FQl-lc-wK5" secondAttribute="top" constant="6" id="cTd-uN-naA"/>
+                            <constraint firstItem="R3E-C1-gta" firstAttribute="centerX" secondItem="FQl-lc-wK5" secondAttribute="centerX" type="default" id="jr9-ox-Qxj"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tUc-nM-ZBs" appends="YES" id="j6u-OD-Gdx"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="R5h-UI-XVx"/>
                     <navigationItem key="navigationItem" id="tvA-gm-e4i"/>
+                    <connections>
+                        <outlet property="lblInfo" destination="R3E-C1-gta" id="KZt-Jw-lbJ"/>
+                        <outlet property="tapGestureRecognizer" destination="tUc-nM-ZBs" id="ETX-yf-lUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nq7-LQ-duG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tUc-nM-ZBs">
+                    <connections>
+                        <action selector="tappedGesture:" destination="zqo-rf-2Yv" id="ByG-Io-ias"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1649" y="-222"/>
         </scene>
