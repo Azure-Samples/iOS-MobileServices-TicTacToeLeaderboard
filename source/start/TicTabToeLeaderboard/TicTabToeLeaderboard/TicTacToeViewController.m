@@ -37,7 +37,7 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    CGFloat dist = self.view.bounds.size.width / 3;
+    distance = self.view.bounds.size.width / 3;
     
     UIView *topHorizontalLine = [[UIView alloc] initWithFrame:CGRectMake(0, 140, self.view.bounds.size.width, 3)];
     topHorizontalLine.backgroundColor = [UIColor blackColor];
@@ -49,11 +49,11 @@
     [self.view addSubview:bottomHorizontalLine];
 
     
-    UIView *leftVerticalLine = [[UIView alloc] initWithFrame:CGRectMake(dist, 40, 3, self.view.bounds.size.width)];
+    UIView *leftVerticalLine = [[UIView alloc] initWithFrame:CGRectMake(distance, 40, 3, self.view.bounds.size.width)];
     leftVerticalLine.backgroundColor = [UIColor blackColor];
     [self.view addSubview:leftVerticalLine];
     
-    UIView *rightVerticalLine = [[UIView alloc] initWithFrame:CGRectMake(dist * 2, 40, 3, self.view.bounds.size.width)];
+    UIView *rightVerticalLine = [[UIView alloc] initWithFrame:CGRectMake(distance * 2, 40, 3, self.view.bounds.size.width)];
     rightVerticalLine.backgroundColor = [UIColor blackColor];
     [self.view addSubview:rightVerticalLine];
     
@@ -63,38 +63,38 @@
     UIFont *font = [UIFont boldSystemFontOfSize:28];
     
     //First row
-    UILabel *labelOne = [[UILabel alloc] initWithFrame:CGRectMake(dist / 2, 40, dist, dist)];
+    UILabel *labelOne = [[UILabel alloc] initWithFrame:CGRectMake(distance / 2, 40, distance, distance)];
     //labelOne.text = @"X";
     labelOne.font = font;
     labelOne.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelOne];
     
-    UILabel *labelTwo = [[UILabel alloc] initWithFrame:CGRectMake(dist * 1.5, 40, dist, dist)];
+    UILabel *labelTwo = [[UILabel alloc] initWithFrame:CGRectMake(distance * 1.5, 40, distance, distance)];
     //labelTwo.text = @"X";
     labelTwo.font = font;
     labelTwo.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelTwo];
     
-    UILabel *labelThree = [[UILabel alloc] initWithFrame:CGRectMake(dist * 2.5, 40, dist, dist)];
+    UILabel *labelThree = [[UILabel alloc] initWithFrame:CGRectMake(distance * 2.5, 40, distance, distance)];
     //labelThree.text = @"X";
     labelThree.font = font;
     labelThree.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelThree];
     
     //Second Row
-    UILabel *labelTwoOne = [[UILabel alloc] initWithFrame:CGRectMake(dist / 2, 140, dist, dist)];
+    UILabel *labelTwoOne = [[UILabel alloc] initWithFrame:CGRectMake(distance / 2, 140, distance, distance)];
     //labelTwoOne.text = @"X";
     labelTwoOne.font = font;
     labelTwoOne.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelTwoOne];
     
-    UILabel *labelTwoTwo = [[UILabel alloc] initWithFrame:CGRectMake(dist * 1.5, 140, dist, dist)];
+    UILabel *labelTwoTwo = [[UILabel alloc] initWithFrame:CGRectMake(distance * 1.5, 140, distance, distance)];
     //labelTwoTwo.text = @"X";
     labelTwoTwo.font = font;
     labelTwoTwo.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelTwoTwo];
     
-    UILabel *labelTwoThree = [[UILabel alloc] initWithFrame:CGRectMake(dist * 2.5, 140, dist, dist)];
+    UILabel *labelTwoThree = [[UILabel alloc] initWithFrame:CGRectMake(distance * 2.5, 140, distance, distance)];
     //labelTwoThree.text = @"X";
     labelTwoThree.font = font;
     labelTwoThree.backgroundColor = [UIColor clearColor];
@@ -102,19 +102,19 @@
     
     
     //Third Row
-    UILabel *labelThreeOne = [[UILabel alloc] initWithFrame:CGRectMake(dist / 2, 240, dist, dist)];
+    UILabel *labelThreeOne = [[UILabel alloc] initWithFrame:CGRectMake(distance / 2, 240, distance, distance)];
     //labelThreeOne.text = @"X";
     labelThreeOne.font = font;
     labelThreeOne.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelThreeOne];
     
-    UILabel *labelThreeTwo = [[UILabel alloc] initWithFrame:CGRectMake(dist * 1.5, 240, dist, dist)];
+    UILabel *labelThreeTwo = [[UILabel alloc] initWithFrame:CGRectMake(distance * 1.5, 240, distance, distance)];
     //labelThreeTwo.text = @"X";
     labelThreeTwo.font = font;
     labelThreeTwo.backgroundColor = [UIColor clearColor];
     [self.view addSubview:labelThreeTwo];
     
-    UILabel *labelThreeThree = [[UILabel alloc] initWithFrame:CGRectMake(dist * 2.5, 240, dist, dist)];
+    UILabel *labelThreeThree = [[UILabel alloc] initWithFrame:CGRectMake(distance * 2.5, 240, distance, distance)];
     //labelThreeThree.text = @"X";
     labelThreeThree.font = font;
     labelThreeThree.backgroundColor = [UIColor clearColor];
@@ -142,49 +142,21 @@
     CGPoint tapPoint = [sender locationInView:self.view];
     int tapX = (int) tapPoint.x;
     int tapY = (int) tapPoint.y;
-        CGFloat dist = self.view.bounds.size.width / 3;
-    
-    //NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
-
-//    if (tapX < dist - 5) {
-//        if (tapY < dist - 5) {
-//            NSLog(@"1-1");
-//        } else if (tapY > dist + 5 && tapY < dist * 2 - 5) {
-//            NSLog(@"2-1");
-//        } else if (tapY > dist * 2 + 5) {
-//            NSLog(@"3-1");
-//        }
-//    } else if (tapX > dist + 5 && tapX < dist * 2 - 5) {
-//        if (tapY < dist - 5) {
-//            NSLog(@"1-2");
-//        } else if (tapY > dist + 5 && tapY < dist * 2 - 5) {
-//            NSLog(@"2-2");
-//        } else if (tapY > dist * 2 + 5) {
-//            NSLog(@"3-2");
-//        }
-//    } else if (tapX > dist * 2 + 5){
-//        if (tapY < dist - 5) {
-//            NSLog(@"1-3");
-//        } else if (tapY > dist + 5 && tapY < dist * 2 - 5) {
-//            NSLog(@"2-3");
-//        } else if (tapY > dist * 2 + 5) {
-//            NSLog(@"3-3");
-//        }
-//    }
+   
     int row = -1;
     int col = -1;
-    if (tapX < dist - 5) {
+    if (tapX < distance - 5) {
         col = 0;
-    } else if (tapX > dist + 5 && tapX < dist * 2 - 5) {
+    } else if (tapX > distance + 5 && tapX < distance * 2 - 5) {
         col = 1;
-    } else if (tapX > dist * 2 + 5){
+    } else if (tapX > distance * 2 + 5){
         col = 2;
     }
-    if (tapY < dist - 5) {
+    if (tapY < distance - 5) {
         row = 0;
-    } else if (tapY > dist + 5 && tapY < dist * 2 - 5) {
+    } else if (tapY > distance + 5 && tapY < distance * 2 - 5) {
         row = 1;
-    } else if (tapY > dist * 2 + 5) {
+    } else if (tapY > distance * 2 + 5) {
         row = 2;
     }
     
@@ -198,7 +170,7 @@
         tappedLabel.text = currentCharacter;
         spotsRemaining--;
         
-        if ([self checkForGameover] || spotsRemaining == 0) {
+        if ([self checkForGameoverAndDrawWinner:NO] || spotsRemaining == 0) {
             [self gameover];
             return;
         }
@@ -242,7 +214,7 @@
     
     spotsRemaining--;
     
-    if ([self checkForGameover] || spotsRemaining == 0) {
+    if ([self checkForGameoverAndDrawWinner:NO] || spotsRemaining == 0) {
         [self gameover];
         return;
     }
@@ -256,7 +228,7 @@
     computersTurn = !computersTurn;
 }
 
-- (BOOL)checkForGameover {
+- (BOOL)checkForGameoverAndDrawWinner:(BOOL)shouldDraw {
     //If there are over 6 spots, the game can't be over
     if (spotsRemaining > 6)
         return NO;
@@ -277,16 +249,23 @@
     if ([labOneOne.text isEqualToString:labOneTwo.text] &&
         [labOneOne.text isEqualToString:labOneThree.text]) {
         winningCharacter = labOneOne.text;
+        
+
+        
         return YES;
     }
     if ([labTwoOne.text isEqualToString:labTwoTwo.text] &&
         [labTwoOne.text isEqualToString:labTwoThree.text]) {
         winningCharacter = labTwoOne.text;
+
+        
         return YES;
     }
     if ([labThreeOne.text isEqualToString:labThreeTwo.text] &&
         [labThreeOne.text isEqualToString:labThreeThree.text]) {
         winningCharacter = labThreeOne.text;
+
+        
         return YES;
     }
     
@@ -294,16 +273,21 @@
     if ([labOneOne.text isEqualToString:labTwoOne.text] &&
         [labOneOne.text isEqualToString:labThreeOne.text]) {
         winningCharacter = labOneOne.text;
+
+        
         return YES;
     }
     if ([labOneTwo.text isEqualToString:labTwoTwo.text] &&
-        [labOneTwo.text isEqualToString:labOneThree.text]) {
+        [labOneTwo.text isEqualToString:labThreeTwo.text]) {
         winningCharacter = labOneTwo.text;
+
+        
         return YES;
     }
     if ([labOneThree.text isEqualToString:labTwoThree.text] &&
         [labOneThree.text isEqualToString:labThreeThree.text]) {
         winningCharacter = labOneThree.text;
+        
         return YES;
     }
 
@@ -311,6 +295,7 @@
     if ([labOneOne.text isEqualToString:labTwoTwo.text] &&
         [labOneOne.text isEqualToString:labThreeThree.text]) {
         winningCharacter = labOneOne.text;
+        
         return YES;
     }
     //Diagonal bottom left to top right
@@ -326,7 +311,9 @@
 - (void)gameover {
     if ([winningCharacter length] == 0)
         self.lblInfo.text = @"No winner!";
-    else
+    else {
         self.lblInfo.text = [NSString stringWithFormat:@"%@ wins!", winningCharacter];
+        [self checkForGameoverAndDrawWinner:YES];
+    }
 }
 @end

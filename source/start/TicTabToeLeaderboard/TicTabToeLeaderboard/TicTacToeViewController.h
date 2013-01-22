@@ -16,11 +16,12 @@
     NSString *currentCharacter;
     int spotsRemaining;
     NSString *winningCharacter;
+    CGFloat distance;
 }
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
 - (IBAction)tappedGesture:(id)sender;
 - (void)computerPicksRow:(int)row andColumn:(int)column;
 - (void)gameover;
-- (BOOL)checkForGameover;
+- (BOOL)checkForGameoverAndDrawWinner:(BOOL)shouldDraw;
 @end
