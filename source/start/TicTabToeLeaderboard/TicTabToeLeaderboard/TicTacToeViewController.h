@@ -29,11 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnTopRight;
 @property (weak, nonatomic) IBOutlet UIButton *btnMiddleRight;
 @property (weak, nonatomic) IBOutlet UIButton *btnBottomRight;
-//@property (weak, nonatomic) NSMutableArray *tableValueArray;
 
 - (IBAction)tappedPlaySquare:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
-@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
 - (IBAction)tappedGesture:(id)sender;
 - (void)computerPicksButton:(UIButton *)pickedButton;
 - (void)gameover;
