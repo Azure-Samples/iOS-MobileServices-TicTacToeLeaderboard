@@ -12,6 +12,7 @@
     @private
     BOOL playersTurn;
     BOOL computersTurn;
+    BOOL gameOver;
     NSMutableArray *tableValueArray;
     NSString *playerCharacter;
     NSString *currentCharacter;

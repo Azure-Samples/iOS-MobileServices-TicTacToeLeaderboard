@@ -41,6 +41,7 @@
         playerCharacter = @"X";
     }
 
+    gameOver = NO;
     currentCharacter = @"X";
     spotsRemaining = 9;
     
@@ -87,9 +88,11 @@
 }
 
 - (IBAction)tappedPlaySquare:(id)sender {
+    
+    if (gameOver)
+        return;
+    
     UIButton *tappedButton = sender;
-    
-    
     if ([tappedButton.currentTitle length] == 0) {
         [tappedButton setTitle:currentCharacter forState:UIControlStateNormal];
         spotsRemaining--;
@@ -156,6 +159,7 @@
 }
 
 - (void)gameover {
+    gameOver = YES;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [defaults objectForKey:@"name"];
     

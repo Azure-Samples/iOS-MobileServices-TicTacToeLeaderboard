@@ -30,7 +30,13 @@
 {
     [super viewDidLoad];
 
-    self.tttService = [TicTacToeService getInstance];    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.tttService = [TicTacToeService getInstance];
     [self refreshData];
 }
 
