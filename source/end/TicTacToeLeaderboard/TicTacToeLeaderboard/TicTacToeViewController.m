@@ -118,15 +118,11 @@
 - (void) computerTurn {
     //Kick off computers turn in the background
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        int cRow = -1;
-        int cCol = -1;
         UIButton *pickedButton;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 pickedButton = tableValueArray[i][j];
                 if ([pickedButton.currentTitle length] == 0) {
-                    cRow = i;
-                    cCol = j;
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self computerPicksButton:pickedButton];
                     });

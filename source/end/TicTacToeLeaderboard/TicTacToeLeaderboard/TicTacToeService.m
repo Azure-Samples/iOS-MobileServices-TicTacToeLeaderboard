@@ -11,7 +11,6 @@
 
 @interface TicTacToeService()
 @property (nonatomic, strong) MSTable *playerRecordsTable;
-@property (nonatomic)                  NSInteger busyCount;
 
 @end
 
@@ -27,18 +26,17 @@ static TicTacToeService *singletonInstance;
 }
 
 -(TicTacToeService *) init {
+    
+    self = [super init];
     // Initialize the Mobile Service client with your URL and key
     MSClient *newClient = [MSClient clientWithApplicationURLString:@"https://tictactoeleaderboard.azure-mobile.net/"
         withApplicationKey:@"KKxeIhnoUWsHXvySIpykYgKgqgVkla70"];
     
-    // Add a Mobile Service filter to enable the busy indicator
+    // Add a Mobile Service filter
     self.client = [newClient clientwithFilter:self];
     
-    // Create an MSTable instance to allow us to work with the TodoItem table
-    self.playerRecordsTable = [_client getTable:@"PlayerRecords"];
-    
+    self.playerRecordsTable = [_client getTable:@"PlayerRecords"];    
     self.playerRecords = [[NSMutableArray alloc] init];
-    self.busyCount = 0;
     
     return self;
 }
@@ -88,26 +86,6 @@ static TicTacToeService *singletonInstance;
     }];
 }
 
-
-
-- (void) busy:(BOOL) busy
-{
-    // assumes always executes on UI thread
-    if (busy) {
-        if (self.busyCount == 0 && self.busyUpdate != nil) {
-            self.busyUpdate(YES);
-        }
-        self.busyCount ++;
-    }
-    else
-    {
-        if (self.busyCount == 1 && self.busyUpdate != nil) {
-            self.busyUpdate(FALSE);
-        }
-        self.busyCount--;
-    }
-}
-
 - (void) logErrorIfNotNil:(NSError *) error
 {
     if (error) {
@@ -122,14 +100,9 @@ static TicTacToeService *singletonInstance;
                 onNext:(MSFilterNextBlock)onNext
             onResponse:(MSFilterResponseBlock)onResponse
 {
-    // A wrapped response block that decrements the busy counter
     MSFilterResponseBlock wrappedResponse = ^(NSHTTPURLResponse *response, NSData *data, NSError *error) {
-        [self busy:NO];
         onResponse(response, data, error);
     };
-    
-    // Increment the busy counter before sending the request
-    [self busy:YES];
     onNext(request, wrappedResponse);
 }
 @end
