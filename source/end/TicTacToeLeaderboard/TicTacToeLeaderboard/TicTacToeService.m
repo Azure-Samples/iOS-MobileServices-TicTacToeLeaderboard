@@ -1,6 +1,6 @@
 //
 //  TicTacToeService.m
-//  TicTabToeLeaderboard
+//  TicTacToeLeaderboard
 //
 //  Created by Chris Risner on 1/22/13.
 //  Copyright (c) 2013 Microsoft. All rights reserved.
