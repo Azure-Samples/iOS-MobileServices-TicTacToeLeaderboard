@@ -1,9 +1,3 @@
-iOS-MobileServices-TicTacToeLeaderboard
-=======================================
-
-This repo will house an iOS tic tac toe game which uses Mobile Services to maintain a leaderboard.  
-
-
 # iOS - Mobile Services - Tic Tac Toe Leaderboard
 This is an iOS leaderboard sample which makes use of Windows Azure Mobile Services for it's data storage.  It will track different player's wins, losses, and ties from playing a game of Tic Tac Toe.  This sample was built using XCode, the iOS Framework, and the iOS Mobile Services SDK.
 
