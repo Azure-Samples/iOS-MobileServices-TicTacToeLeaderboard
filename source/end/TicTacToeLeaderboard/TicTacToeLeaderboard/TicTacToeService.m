@@ -29,8 +29,8 @@ static TicTacToeService *singletonInstance;
     
     self = [super init];
     // Initialize the Mobile Service client with your URL and key
-    MSClient *newClient = [MSClient clientWithApplicationURLString:@"https://<YourMobileServiceUrl>.azure-mobile.net/"
-        withApplicationKey:@"<YourApplicationKey>"];
+    MSClient *newClient = [MSClient clientWithApplicationURLString:@"https://tictactoeleaderboard.azure-mobile.net/"
+        withApplicationKey:@"KKxeIhnoUWsHXvySIpykYgKgqgVkla70"];
     
     // Add a Mobile Service filter
     self.client = [newClient clientwithFilter:self];
