@@ -1,4 +1,4 @@
-# iOS - Mobile Services - Tic Tac Toe Leaderboard
+﻿# iOS - Mobile Services - Tic Tac Toe Leaderboard
 This is an iOS leaderboard sample which makes use of Windows Azure Mobile Services for it's data storage.  It will track different player's wins, losses, and ties from playing a game of Tic Tac Toe.  This sample was built using XCode, the iOS Framework, and the iOS Mobile Services SDK.
 
 Below you will find requirements and deployment instructions.
@@ -22,7 +22,7 @@ After creating your Mobile Service in the Windows Azure Portal, you'll need to c
 * /source/scripts/PlayerRecords.read.script
 
 #Client Application Changes
-In order to run the client applicaiton, you'll need to change a few settings in your application.  After opening the source code in Xcode, open the TicTacToeService.m file.  Find the init method and change the <YourMobileServiceUrl> and <YourApplicationKey> to match the values from the Mobile Service you've created.
+In order to run the client applicaiton, you'll need to change a few settings in your application.  After opening the source code in Xcode, open the TicTacToeService.m file.  Find the init method and change the \<YourMobileServiceUrl> and \<YourApplicationKey> to match the values from the Mobile Service you've created.
 
 ## Contact
 
