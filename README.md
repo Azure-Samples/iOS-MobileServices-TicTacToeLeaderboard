@@ -1,3 +1,9 @@
+---
+services:
+platforms:
+author: azure
+---
+
 ﻿# iOS - Mobile Services - Tic Tac Toe Leaderboard
 This is an iOS leaderboard sample which makes use of Windows Azure Mobile Services for it's data storage.  It will track different player's wins, losses, and ties from playing a game of Tic Tac Toe.  This sample was built using XCode, the iOS Framework, and the iOS Mobile Services SDK.
 
